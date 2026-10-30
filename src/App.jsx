@@ -18,7 +18,7 @@ const AREA_CODES = [
   { code: "39", name: "제주" }
 ];
 
-const TOUR_API_KEY = "YOUR_PUBLIC_DATA_PORTAL_DECODING_KEY";
+const TOUR_API_KEY = "Dpva6vJJ1NWDNGeibLpRCDAGFK8SpHKi+Xz0cYf5UbV88z1wfNpKdrRYDUVfR/CTgZ3K3zPzGLLQJcifSI/CLg==";
 
 export default function App() {
   const [selectedArea, setSelectedArea] = useState("");
@@ -29,7 +29,7 @@ export default function App() {
   // TourAPI 지역기반 관광정보 조회 함수
   const fetchTourData = async (areaCode) => {
     setLoading(true);
-    const endpoint = `https://apis.data.go.kr/B551011/KorService1/areaBasedList1?serviceKey=${encodeURIComponent(
+    const endpoint = `https://apis.data.go.kr/B551011/KorService2/areaBasedList2?serviceKey=${encodeURIComponent(
       TOUR_API_KEY
     )}&numOfRows=12&pageNo=1&MobileOS=ETC&MobileApp=TourApp&_type=json&arrange=O&areaCode=${areaCode}`;
 
